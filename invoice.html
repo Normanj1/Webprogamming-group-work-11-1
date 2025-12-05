@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | CarAccess Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Dudley's AutoLux</h1>
+                <p>Drive Your Style</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="profile-link">
+                        <a href="login.html" class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="invoice-container">
+                    <div class="invoice-header">
+                        <h2>Order Invoice</h2>
+                        <p>Thank you for your purchase!</p>
+                    </div>
+
+                    <div class="invoice-details">
+                        <div class="invoice-info">
+                            <div class="info-row">
+                                <div>
+                                    <h3>CarAccess Pro</h3>
+                                    <p>123 Auto Street</p>
+                                    <p>Kingston, Jamaica</p>
+                                    <p>Phone: (876) 555-1234</p>
+                                </div>
+                                <div>
+                                    <p><strong>Invoice #:</strong> INV-2024-001</p>
+                                    <p><strong>Date:</strong> <span id="invoice-date"></span></p>
+                                    <p><strong>Order ID:</strong> ORD-2024-001</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="invoice-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoice-items">
+                                <!-- Invoice items will be dynamically generated -->
+                            </tbody>
+                        </table>
+
+                        <div class="invoice-totals">
+                            <div>
+                                <strong>Subtotal:</strong> <span id="invoice-subtotal">JMD $0</span>
+                            </div>
+                            <div>
+                                <strong>GCT (15%):</strong> <span id="invoice-tax">JMD $0</span>
+                            </div>
+                            <div>
+                                <strong>Total:</strong> <span id="invoice-total">JMD $0</span>
+                            </div>
+                        </div>
+
+                        <div class="invoice-actions">
+                            <button id="print-invoice" class="btn btn-primary">Print Invoice</button>
+                            <a href="index.html" class="btn btn-secondary">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CarAccess Pro. All rights reserved.</p>
+            <p><a href="login.html">Login</a> | <a href="register.html">Register</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

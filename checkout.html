@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | CarAccess Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Dudley's AutoLux</h1>
+                <p>Drive Your Style</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="profile-link">
+                        <a href="login.html" class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="checkout-container">
+                    <div class="checkout-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-items">
+                            <!-- Checkout items will be dynamically generated -->
+                        </div>
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">JMD $0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>GCT (15%):</span>
+                                <span id="checkout-tax">JMD $0</span>
+                            </div>
+                            <div class="summary-row summary-total">
+                                <span>Total:</span>
+                                <span id="checkout-total">JMD $0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-form">
+                        <h3>Shipping Information</h3>
+                        <form id="checkout-form">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Shipping Address</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parish">Parish</label>
+                                <select id="parish" name="parish" required>
+                                    <option value="">Select Parish</option>
+                                    <option value="kingston">Kingston</option>
+                                    <option value="st-andrew">St. Andrew</option>
+                                    <option value="st-catherine">St. Catherine</option>
+                                    <option value="clarendon">Clarendon</option>
+                                    <option value="manchester">Manchester</option>
+                                    <option value="st-elisabeth">St. Elisabeth</option>
+                                    <option value="westmoreland">Westmoreland</option>
+                                    <option value="hanover">Hanover</option>
+                                    <option value="st-james">St. James</option>
+                                    <option value="trelawny">Trelawny</option>
+                                    <option value="st-ann">St. Ann</option>
+                                    <option value="st-mary">St. Mary</option>
+                                    <option value="portland">Portland</option>
+                                    <option value="st-thomas">St. Thomas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-method">Payment Method</label>
+                                <select id="payment-method" name="payment-method" required>
+                                    <option value="">Select Payment Method</option>
+                                    <option value="credit">Credit Card</option>
+                                    <option value="debit">Debit Card</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="linx">Linx</option>
+                                    <option value="jamdex">JamDex</option>
+                                </select>
+                            </div>
+
+                            <div class="checkout-actions">
+                                <a href="cart.html" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Confirm Order</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CarAccess Pro. All rights reserved.</p>
+            <p><a href="login.html">Login</a> | <a href="register.html">Register</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
