@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CarAccess Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Dudley's AutoLux</h1>
+                <p>Drive Your Style</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="profile-link">
+                        <a href="login.html" class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Create Your Account</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="firstname">First Name *</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname">Last Name *</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                            <small id="age-error" style="color: #ef4444; display: none;">You must be 18 years or older
+                                to register.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}"
+                                placeholder="8765551234 or 18765551234" required>
+                            <small>(e.g., 8765551234) or (e.g., 18765551234)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trn">Tax Registration Number (TRN) *</label>
+                            <input type="text" id="trn" name="trn" pattern="[0-9]{9}" placeholder="000000000" required>
+                            <small id="trn-error" style="color: #ef4444; display: none;">TRN must be a 9-digit number
+                                (e.g., 123456789).</small>
+                            <small>9 digits (e.g., 123456789)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" name="password" minlength="8" required>
+                            <small>Password must be at least 8 characters long.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password *</label>
+                            <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+                            <small id="password-error" style="color: #ef4444; display: none;">Passwords do not
+                                match.</small>
+                        </div>
+
+                        <div class="form-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                            <button type="button" id="cancel-btn" class="btn btn-secondary"
+                                style="flex: 1;">Cancel</button>
+                            <button type="submit" class="btn btn-primary" style="flex: 1;">Register</button>
+                        </div>
+                    </form>
+                    <p style="text-align: center; margin-top: 1rem;">
+                        Already have an account? <a href="login.html">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CarAccess Pro. All rights reserved.</p>
+            <p><a href="login.html">Login</a> | <a href="register.html">Register</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
